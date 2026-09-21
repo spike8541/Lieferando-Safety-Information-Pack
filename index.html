@@ -1421,9 +1421,8 @@
         buildAccordions();
         buildGate();
         const saved = recall('lieferandoPackLang');
-        if (saved === 'en' || saved === 'de') {
-            document.getElementById('langGate').classList.add('hidden');
-            selectedLang = saved;
+selectedLang = (saved === 'en' || saved === 'de') ? saved : 'de';
+document.getElementById('langGate').classList.add('hidden');
         }
         visiblePages = getVisiblePages();
         applyChrome();
